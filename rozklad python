@@ -1,0 +1,17 @@
+import math #potrzebny import
+ 
+ 
+def rozloz(x): #definiujemy funkcje do późniejszego użycia
+    print(str(x) + " = "),
+    k = 2 #ustawiamy zmienna pomocnicza, oznaczajaca aktualny dzielnik
+    while x >= 2: #dopoki x nie przyjmie wartosci mniejszej niz 2
+        while x % k == 0: #dopoki x bedzie podzielny przez zmienna pomocnicza
+            print(str(x) + " "), #wypisz ja do konsoli
+            x = int(x/k) #a nastepnie zapisz wynik dzielenia
+        k += 1 #co kazda iteracje zwieksz zmienna pomocnicza o 1
+    print("1") #wypisz 1 na koniec - dzielnik kazdej liczby
+ 
+print("Program rozkladający liczbę na jej czynniki.")
+print("Podaj liczbę: ")
+a = int(input())
+rozloz(a)
